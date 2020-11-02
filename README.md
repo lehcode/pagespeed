@@ -3,7 +3,7 @@
 Displays PageSpeed results for predefined set of pages.
 
 ### Prepare
-Copy .env.dist to .env and add PageSpeed API key to it.
+Copy `.env.dist` to `.env` and add PageSpeed API key to it.
  
 Add AWS account secrets in `~/.aws/credentials` with following content:
 
