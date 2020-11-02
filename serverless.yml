@@ -1,0 +1,22 @@
+service: aws-lambda-typescript-pagespeed-app
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-2
+  environment:
+    PAGESPEED_API_KEY: ${env:PAGESPEED_API_KEY}
+
+functions:
+  getData:
+    handler: src/getHostsData.handler
+    events:
+      - http:
+          path: /
+          method: get
